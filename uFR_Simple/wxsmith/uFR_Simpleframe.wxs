@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="uFR_SimpleFrame">
+		<title>µFR MIFARE® Simple</title>
+		<size>567,729</size>
+		<bg>wxSYS_COLOUR_WINDOW</bg>
+		<id_arg>0</id_arg>
+		<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBox1" member="yes">
+			<label>Reader Open</label>
+			<pos>8,8</pos>
+			<size>552,80</size>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="btnReaderOpen" member="yes">
+			<label>Reader Open</label>
+			<pos>16,32</pos>
+			<size>104,40</size>
+			<handler function="OnbtnReaderOpenClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX1" variable="UseAdvancedCH" member="yes">
+			<label>Use Advanced options</label>
+			<pos>144,48</pos>
+			<handler function="OnUseAdvancedCHClick" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxHyperlinkCtrl" name="ID_HYPERLINKCTRL1" variable="HyperlinkCtrl1" member="yes">
+			<label>https://www.d-logic.net/nfc-rfid-reader-sdk/</label>
+			<pos>312,48</pos>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX2" variable="StaticBox2" member="yes">
+			<label>Advaned options</label>
+			<pos>8,96</pos>
+			<size>552,48</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="RtypeST" member="yes">
+			<label>Reader type :</label>
+			<pos>16,120</pos>
+			<enabled>0</enabled>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="RtypeTB" member="yes">
+			<maxlength>1</maxlength>
+			<pos>88,119</pos>
+			<size>25,18</size>
+			<enabled>0</enabled>
+			<style>wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="PnameST" member="yes">
+			<label>Port name :</label>
+			<pos>128,120</pos>
+			<enabled>0</enabled>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="PnameTB" member="yes">
+			<pos>192,119</pos>
+			<size>85,18</size>
+			<enabled>0</enabled>
+			<style>wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="PinterfaceST" member="yes">
+			<label>Port interface :</label>
+			<pos>288,120</pos>
+			<enabled>0</enabled>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL3" variable="PinterfaceTB" member="yes">
+			<maxlength>1</maxlength>
+			<pos>368,119</pos>
+			<size>25,18</size>
+			<enabled>0</enabled>
+			<style>wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT4" variable="ArgST" member="yes">
+			<label>Arg :</label>
+			<pos>400,120</pos>
+			<enabled>0</enabled>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL4" variable="ArgTB" member="yes">
+			<pos>432,119</pos>
+			<size>120,18</size>
+			<enabled>0</enabled>
+			<style>wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX3" variable="StaticBox3" member="yes">
+			<pos>8,156</pos>
+			<size>552,136</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+			<label>Reader type :</label>
+			<pos>16,168</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL5" variable="ReaderTypeViewTB" member="yes">
+			<pos>96,167</pos>
+			<size>181,18</size>
+			<style>wxTE_READONLY|wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
+			<label>Reader serial :</label>
+			<pos>16,192</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL6" variable="ReaderSerialTB" member="yes">
+			<pos>96,191</pos>
+			<size>181,18</size>
+			<style>wxTE_READONLY|wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText7" member="yes">
+			<label>Card type :</label>
+			<pos>288,168</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL7" variable="CardTypeTB" member="yes">
+			<pos>352,167</pos>
+			<size>56,18</size>
+			<style>wxTE_READONLY|wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT8" variable="StaticText8" member="yes">
+			<label>UID Size :</label>
+			<pos>416,168</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL8" variable="UidSizeTB" member="yes">
+			<pos>472,167</pos>
+			<size>80,18</size>
+			<style>wxTE_READONLY|wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT9" variable="StaticText9" member="yes">
+			<label>Card serial :</label>
+			<pos>288,192</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL9" variable="UidTB" member="yes">
+			<pos>352,191</pos>
+			<size>200,18</size>
+			<style>wxTE_READONLY|wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticLine" name="ID_STATICLINE1" variable="StaticLine1" member="yes">
+			<pos>8,216</pos>
+			<size>552,5</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT10" variable="StaticText10" member="yes">
+			<label>Light mode :</label>
+			<pos>16,232</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX1" variable="LightCB" member="yes">
+			<content>
+				<item>None</item>
+				<item>Long green</item>
+				<item>Long red</item>
+				<item>Alternation</item>
+				<item>Flash</item>
+			</content>
+			<selection>0</selection>
+			<pos>96,228</pos>
+			<size>181,18</size>
+			<style>wxCB_READONLY</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT11" variable="StaticText11" member="yes">
+			<label>Sound mode :</label>
+			<pos>16,264</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX2" variable="BeepCB" member="yes">
+			<content>
+				<item>None</item>
+				<item>Short</item>
+				<item>Long</item>
+				<item>Double short</item>
+				<item>Triple short</item>
+				<item>Triple melody</item>
+			</content>
+			<selection>0</selection>
+			<pos>96,260</pos>
+			<size>181,18</size>
+			<style>wxCB_READONLY</style>
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="btnReaderUISignal" member="yes">
+			<label>READER UI SIGNAL</label>
+			<pos>288,230</pos>
+			<size>264,50</size>
+			<handler function="OnbtnReaderUISignalClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticLine" name="ID_STATICLINE2" variable="StaticLine2" member="yes">
+			<pos>8,296</pos>
+			<size>552,16</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX4" variable="StaticBox4" member="yes">
+			<pos>8,312</pos>
+			<size>552,40</size>
+			<bg>wxSYS_COLOUR_INACTIVEBORDER</bg>
+		</object>
+		<object class="wxRadioButton" name="ID_RADIOBUTTON1" variable="RB_KeyA" member="yes">
+			<label>AUTH 1A</label>
+			<selected>1</selected>
+			<pos>184,328</pos>
+			<size>72,13</size>
+			<bg>wxSYS_COLOUR_INACTIVEBORDER</bg>
+			<font>
+				<weight>bold</weight>
+			</font>
+		</object>
+		<object class="wxRadioButton" name="ID_RADIOBUTTON2" variable="RB_KeyB" member="yes">
+			<label>AUTH 1B</label>
+			<pos>324,328</pos>
+			<size>72,13</size>
+			<bg>wxSYS_COLOUR_INACTIVEBORDER</bg>
+			<font>
+				<weight>bold</weight>
+			</font>
+		</object>
+		<object class="wxNotebook" name="ID_NOTEBOOK1" variable="Notebook1" member="yes">
+			<pos>8,360</pos>
+			<size>552,112</size>
+			<object class="notebookpage">
+				<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
+					<object class="wxStaticText" name="ID_STATICTEXT12" variable="StaticText12" member="yes">
+						<label>Key A :</label>
+						<pos>16,16</pos>
+					</object>
+					<object class="wxTextCtrl" name="ID_TEXTCTRL10" variable="NewKeyATB" member="yes">
+						<value>FFFFFFFFFFFF</value>
+						<maxlength>12</maxlength>
+						<pos>56,15</pos>
+						<size>200,18</size>
+					</object>
+					<object class="wxStaticText" name="ID_STATICTEXT13" variable="StaticText13" member="yes">
+						<label>Key B :</label>
+						<pos>16,40</pos>
+					</object>
+					<object class="wxTextCtrl" name="ID_TEXTCTRL11" variable="NewKeyBTB" member="yes">
+						<value>FFFFFFFFFFFF</value>
+						<maxlength>12</maxlength>
+						<pos>56,39</pos>
+						<size>200,18</size>
+					</object>
+					<object class="wxButton" name="ID_BUTTON3" variable="btnFormatCard" member="yes">
+						<label>FORMAT CARD</label>
+						<pos>264,16</pos>
+						<size>275,40</size>
+						<handler function="OnbtnFormatCardClick" entry="EVT_BUTTON" />
+					</object>
+					<object class="wxStaticText" name="ID_STATICTEXT14" variable="StaticText14" member="yes">
+						<label>Sectors formatted :</label>
+						<pos>392,64</pos>
+					</object>
+					<object class="wxTextCtrl" name="ID_TEXTCTRL12" variable="SectorsFormattedTB" member="yes">
+						<pos>496,63</pos>
+						<size>40,18</size>
+						<style>wxTE_READONLY|wxTE_CENTRE</style>
+					</object>
+				</object>
+				<label>New card keys</label>
+			</object>
+			<object class="notebookpage">
+				<object class="wxPanel" name="ID_PANEL2" variable="Panel2" member="yes">
+					<size>544,107</size>
+					<object class="wxStaticText" name="ID_STATICTEXT15" variable="StaticText15" member="yes">
+						<label>KEY :</label>
+						<pos>8,32</pos>
+					</object>
+					<object class="wxTextCtrl" name="ID_TEXTCTRL13" variable="ReaderKeyTB" member="yes">
+						<maxlength>12</maxlength>
+						<pos>48,31</pos>
+						<size>200,18</size>
+					</object>
+					<object class="wxStaticText" name="ID_STATICTEXT16" variable="StaticText16" member="yes">
+						<label>Key index :</label>
+						<pos>264,32</pos>
+					</object>
+					<object class="wxSpinCtrl" name="ID_SPINCTRL1" variable="KeyIndexSpin" member="yes">
+						<value>0</value>
+						<max>31</max>
+						<pos>328,31</pos>
+						<size>50,18</size>
+					</object>
+					<object class="wxButton" name="ID_BUTTON4" variable="btnWriteKeyIntoReader" member="yes">
+						<label>WRITE KEY INTO READER</label>
+						<pos>392,29</pos>
+						<size>144,23</size>
+						<handler function="OnbtnWriteKeyIntoReaderClick" entry="EVT_BUTTON" />
+					</object>
+				</object>
+				<label>New reader key</label>
+			</object>
+		</object>
+		<object class="wxNotebook" name="ID_NOTEBOOK2" variable="Notebook2" member="yes">
+			<pos>8,480</pos>
+			<size>552,168</size>
+			<object class="notebookpage">
+				<object class="wxPanel" name="ID_PANEL3" variable="Panel3" member="yes">
+					<object class="wxStaticText" name="ID_STATICTEXT21" variable="StaticText21" member="yes">
+						<label>Read Data</label>
+						<pos>8,8</pos>
+					</object>
+					<object class="wxTextCtrl" name="ID_TEXTCTRL18" variable="ReadDataTB" member="yes">
+						<pos>8,24</pos>
+						<size>528,80</size>
+						<style>wxTE_MULTILINE|wxTE_READONLY</style>
+					</object>
+					<object class="wxStaticText" name="ID_STATICTEXT22" variable="StaticText22" member="yes">
+						<label>Linear address :</label>
+						<pos>8,115</pos>
+					</object>
+					<object class="wxTextCtrl" name="ID_TEXTCTRL19" variable="LA_ReadTB" member="yes">
+						<pos>96,113</pos>
+						<size>35,21</size>
+					</object>
+					<object class="wxStaticText" name="ID_STATICTEXT23" variable="StaticText23" member="yes">
+						<label>Data length :</label>
+						<pos>136,115</pos>
+					</object>
+					<object class="wxTextCtrl" name="ID_TEXTCTRL20" variable="DL_ReadTB" member="yes">
+						<pos>208,113</pos>
+						<size>35,21</size>
+					</object>
+					<object class="wxStaticText" name="ID_STATICTEXT24" variable="StaticText24" member="yes">
+						<label>Read bytes :</label>
+						<pos>248,115</pos>
+					</object>
+					<object class="wxTextCtrl" name="ID_TEXTCTRL21" variable="ReadBytesTB" member="yes">
+						<pos>320,113</pos>
+						<size>35,21</size>
+						<enabled>0</enabled>
+						<style>wxTE_READONLY</style>
+					</object>
+					<object class="wxButton" name="ID_BUTTON6" variable="btnLinearRead" member="yes">
+						<label>LINEAR READ</label>
+						<pos>368,112</pos>
+						<size>168,23</size>
+						<handler function="OnbtnLinearReadClick" entry="EVT_BUTTON" />
+					</object>
+				</object>
+				<label>Linear Read</label>
+			</object>
+			<object class="notebookpage">
+				<object class="wxPanel" name="ID_PANEL4" variable="Panel4" member="yes">
+					<size>544,127</size>
+					<object class="wxStaticText" name="ID_STATICTEXT17" variable="StaticText17" member="yes">
+						<label>Write Data</label>
+						<pos>8,8</pos>
+					</object>
+					<object class="wxTextCtrl" name="ID_TEXTCTRL14" variable="WriteDataTB" member="yes">
+						<pos>8,24</pos>
+						<size>528,80</size>
+						<style>wxTE_MULTILINE</style>
+						<handler function="OnWriteDataTBText" entry="EVT_TEXT" />
+						<handler function="OnWriteDataTBTextEnter" entry="EVT_TEXT_ENTER" />
+					</object>
+					<object class="wxStaticText" name="ID_STATICTEXT18" variable="StaticText18" member="yes">
+						<label>Linear address :</label>
+						<pos>8,115</pos>
+					</object>
+					<object class="wxTextCtrl" name="ID_TEXTCTRL15" variable="LA_WriteTB" member="yes">
+						<pos>96,112</pos>
+						<size>35,21</size>
+					</object>
+					<object class="wxStaticText" name="ID_STATICTEXT19" variable="StaticText19" member="yes">
+						<label>Data length :</label>
+						<pos>136,115</pos>
+					</object>
+					<object class="wxTextCtrl" name="ID_TEXTCTRL16" variable="DA_WriteTB" member="yes">
+						<pos>208,112</pos>
+						<size>35,21</size>
+						<style>wxTE_READONLY|wxTE_CENTRE</style>
+					</object>
+					<object class="wxStaticText" name="ID_STATICTEXT20" variable="StaticText20" member="yes">
+						<label>Bytes written :</label>
+						<pos>253,115</pos>
+					</object>
+					<object class="wxTextCtrl" name="ID_TEXTCTRL17" variable="Written_TB" member="yes">
+						<pos>330,112</pos>
+						<size>35,21</size>
+					</object>
+					<object class="wxButton" name="ID_BUTTON5" variable="btnLinearWrite" member="yes">
+						<label>LINEAR WRITE</label>
+						<pos>376,111</pos>
+						<size>160,23</size>
+						<handler function="OnbtnLinearWriteClick" entry="EVT_BUTTON" />
+					</object>
+				</object>
+				<label>Linear Write</label>
+			</object>
+		</object>
+		<object class="wxStaticLine" name="ID_STATICLINE3" variable="StaticLine3" member="yes">
+			<pos>0,656</pos>
+			<size>568,2</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT25" variable="StaticText25" member="yes">
+			<label>FUNCTION ERROR</label>
+			<pos>8,662</pos>
+		</object>
+		<object class="wxStaticLine" name="ID_STATICLINE4" variable="StaticLine4" member="yes">
+			<pos>0,680</pos>
+			<size>568,2</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT26" variable="StaticText26" member="yes">
+			<label>CARD STATUS</label>
+			<pos>8,686</pos>
+		</object>
+		<object class="wxStaticLine" name="ID_STATICLINE5" variable="StaticLine5" member="yes">
+			<pos>0,704</pos>
+			<size>568,2</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT27" variable="FunctionStatus" member="yes">
+			<label></label>
+			<pos>288,662</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT28" variable="CardStatus" member="yes">
+			<label></label>
+			<pos>288,686</pos>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
+			<fields>1</fields>
+			<widths>-1</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+		<object class="wxTimer" name="ID_TIMER1" variable="Timer1" member="yes">
+			<interval>200</interval>
+			<handler function="OnTimer1Trigger" entry="EVT_TIMER" />
+		</object>
+	</object>
+</wxsmith>

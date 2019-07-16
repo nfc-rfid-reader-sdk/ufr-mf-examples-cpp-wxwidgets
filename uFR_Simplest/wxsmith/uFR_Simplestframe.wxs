@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="uFR_SimplestFrame">
+		<title>µFR MIFARE® Simplest</title>
+		<size>550,562</size>
+		<bg>wxSYS_COLOUR_WINDOW</bg>
+		<id_arg>0</id_arg>
+		<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBox1" member="yes">
+			<label>Reader Open</label>
+			<pos>8,8</pos>
+			<size>536,80</size>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="btnReaderOpen" member="yes">
+			<label>Reader Open</label>
+			<pos>16,32</pos>
+			<size>96,40</size>
+			<handler function="OnbtnReaderOpenClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX1" variable="UseAdvancedCH" member="yes">
+			<label>Use Advanced options</label>
+			<pos>128,48</pos>
+			<handler function="OnUseAdvancedCHClick" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxHyperlinkCtrl" name="ID_HYPERLINKCTRL1" variable="HyperlinkCtrl1" member="yes">
+			<label>https://www.d-logic.net/nfc-rfid-reader-sdk/</label>
+			<pos>288,48</pos>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX2" variable="StaticBox2" member="yes">
+			<label>Advanced options</label>
+			<pos>8,96</pos>
+			<size>536,48</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="RtypeST" member="yes">
+			<label>Reader type :</label>
+			<pos>16,120</pos>
+			<enabled>0</enabled>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="RTypeTB" member="yes">
+			<maxlength>1</maxlength>
+			<pos>88,119</pos>
+			<size>25,18</size>
+			<enabled>0</enabled>
+			<style>wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="PnameST" member="yes">
+			<label>Port name :</label>
+			<pos>120,120</pos>
+			<enabled>0</enabled>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="PnameTB" member="yes">
+			<pos>184,119</pos>
+			<size>85,18</size>
+			<enabled>0</enabled>
+			<style>wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="PinterfaceST" member="yes">
+			<label>Port interface :</label>
+			<pos>280,120</pos>
+			<enabled>0</enabled>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL3" variable="PinterfaceTB" member="yes">
+			<maxlength>1</maxlength>
+			<pos>360,119</pos>
+			<size>25,18</size>
+			<enabled>0</enabled>
+			<style>wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT4" variable="ArgST" member="yes">
+			<label>Arg :</label>
+			<pos>392,120</pos>
+			<enabled>0</enabled>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL4" variable="ArgTB" member="yes">
+			<pos>424,119</pos>
+			<size>112,18</size>
+			<enabled>0</enabled>
+			<style>wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+			<label>Card type :</label>
+			<pos>8,152</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL5" variable="CardTypeTB" member="yes">
+			<pos>72,151</pos>
+			<size>40,18</size>
+			<enabled>0</enabled>
+			<font>
+				<weight>bold</weight>
+			</font>
+			<style>wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
+			<label>UID Size :</label>
+			<pos>120,152</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL6" variable="UidSizeTB" member="yes">
+			<pos>176,151</pos>
+			<size>96,18</size>
+			<enabled>0</enabled>
+			<font>
+				<weight>bold</weight>
+			</font>
+			<style>wxTE_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText7" member="yes">
+			<label>Card UID :</label>
+			<pos>8,179</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL7" variable="UidTB" member="yes">
+			<pos>72,175</pos>
+			<size>200,18</size>
+			<enabled>0</enabled>
+			<font>
+				<weight>bold</weight>
+			</font>
+			<style>wxTE_CENTRE</style>
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="btnFormatCard" member="yes">
+			<label>FORMAT CARD</label>
+			<pos>280,152</pos>
+			<size>264,39</size>
+			<handler function="OnbtnFormatCardClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT8" variable="StaticText8" member="yes">
+			<label>Write data</label>
+			<pos>8,208</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL8" variable="WriteDataTB" member="yes">
+			<pos>8,224</pos>
+			<size>264,152</size>
+			<style>wxTE_MULTILINE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT9" variable="StaticText9" member="yes">
+			<label>Read data</label>
+			<pos>280,208</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL9" variable="ReadDataTB" member="yes">
+			<pos>280,224</pos>
+			<size>264,152</size>
+			<style>wxTE_MULTILINE|wxTE_READONLY</style>
+		</object>
+		<object class="wxButton" name="ID_BUTTON3" variable="btnLinearWrite" member="yes">
+			<label>LINEAR WRITE</label>
+			<pos>8,384</pos>
+			<size>264,40</size>
+			<handler function="OnbtnLinearWriteClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON4" variable="btnLinearRead" member="yes">
+			<label>LINEAR READ</label>
+			<pos>280,384</pos>
+			<size>264,40</size>
+			<handler function="OnbtnLinearReadClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticLine" name="ID_STATICLINE1" variable="StaticLine1" member="yes">
+			<pos>0,440</pos>
+			<size>552,2</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT10" variable="StaticText10" member="yes">
+			<label>FUNCTION STATUS</label>
+			<pos>8,445</pos>
+		</object>
+		<object class="wxStaticLine" name="ID_STATICLINE2" variable="StaticLine2" member="yes">
+			<pos>0,464</pos>
+			<size>552,2</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT11" variable="StaticText11" member="yes">
+			<label>CARD STATUS</label>
+			<pos>8,470</pos>
+		</object>
+		<object class="wxStaticLine" name="ID_STATICLINE3" variable="StaticLine3" member="yes">
+			<pos>0,488</pos>
+			<size>552,2</size>
+		</object>
+		<object class="wxStaticLine" name="ID_STATICLINE4" variable="StaticLine4" member="yes">
+			<pos>0,512</pos>
+			<size>552,2</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT12" variable="StaticText12" member="yes">
+			<label>CONNECTION</label>
+			<pos>8,494</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT13" variable="FunctionStatus" member="yes">
+			<label></label>
+			<pos>280,445</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT14" variable="CardStatus" member="yes">
+			<label></label>
+			<pos>280,470</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT15" variable="ConnectionStatus" member="yes">
+			<label></label>
+			<pos>280,494</pos>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
+			<fields>1</fields>
+			<widths>-1</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+		<object class="wxTimer" name="ID_TIMER1" variable="Timer1" member="yes">
+			<interval>200</interval>
+			<handler function="OnTimer1Trigger" entry="EVT_TIMER" />
+		</object>
+	</object>
+</wxsmith>
